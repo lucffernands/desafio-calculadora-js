@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
+    <header>       
       <nav class="container">
         <h1>Fastcalc</h1>
       </nav>
@@ -38,14 +38,14 @@
             </div>
           </div>
           <div class="result-container">
-            <div id="result-box">
+            <div id="result-box" onclick="result()">
               0
             </div>
           </div>
           <div class="buttons-container">
-            <div id="btn-plus" class="btn">+</div>
-            <div id="btn-times" class="btn">x</div>
-            <div id="btn-clear" class="btn">C</div>
+            <div id="btn-plus" class="btn" onclick="sum()">+</div>
+            <div id="btn-times" class="btn" onclick="multiply()">x</div>
+            <div id="btn-clear" class="btn" onclick="clean()">C</div>
           </div>
         </div>
       </section>      
