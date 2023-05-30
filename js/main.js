@@ -6,26 +6,38 @@ function sum() {
     const n1 = inputNumber1.value;
     const n2 = inputNumber2.value;
 
-    if(isNumber(n1) && isNumber(n2)) {
-        result.innerHTML = (+n1) + (+n2);
-
-    }else if(!isNumber(n1) && !isNumber(n2)){
+    if(!isNumber(n1) && !isNumber(n2)){
         inputNumber1.classList.add('input-error');
         inputNumber2.classList.add('input-error');
-
     }else if(!isNumber(n1)){
         inputNumber1.classList.add('input-error');
 
     }else if(!isNumber(n2)){
         inputNumber2.classList.add('input-error');
+    }else{
+        result.innerHTML = (+n1) + (+n2);
+        inputNumber1.classList.remove('input-error');
+        inputNumber2.classList.remove('input-error');
     }
-  
 }
 
 function multiply() {
     const n1 = inputNumber1.value;
     const n2 = inputNumber2.value;
-    result.innerHTML = (+n1) * (+n2);
+
+    if(!isNumber(n1) && !isNumber(n2)){
+        inputNumber1.classList.add('input-error');
+        inputNumber2.classList.add('input-error');
+    }else if(!isNumber(n1)){
+        inputNumber1.classList.add('input-error');
+
+    }else if(!isNumber(n2)){
+        inputNumber2.classList.add('input-error');
+    }else{
+        result.innerHTML = (+n1) * (+n2);
+        inputNumber1.classList.remove('input-error');
+        inputNumber2.classList.remove('input-error');
+    }
 }
 
 function clean() {
@@ -39,3 +51,26 @@ function clean() {
 function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
+
+/* !!DESAFIO EXTRA!!
+
+function inputError1(){
+    const n1 = inputNumber1.value;
+
+    if(!isNumber(n1) && n1!=''){
+        inputNumber1.classList.add('input-error');
+    }else{
+        inputNumber1.classList.remove('input-error');
+    }
+}
+
+function inputError2(){
+    const n2 = inputNumber2.value;
+
+    if(!isNumber(n2) && n2!=''){
+        inputNumber2.classList.add('input-error');
+    }else{
+        inputNumber2.classList.remove('input-error');
+    }
+}
+*/
